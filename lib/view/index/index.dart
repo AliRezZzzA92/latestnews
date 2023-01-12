@@ -56,22 +56,27 @@ class Index extends StatelessWidget {
                     backgroundColor: Colors.black),
               ),
             ),
-            Container(
-              alignment: Alignment.bottomCenter,
-              height: 180,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  image: const DecorationImage(
-                      image:
-                          AssetImage("lib/assets/images/grid/celebrities.jpg"),
-                      fit: BoxFit.fill)),
-              child: const Text(
-                "celebrities",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    backgroundColor: Colors.black),
+            InkWell(
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                height: 180,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    image: const DecorationImage(
+                        image: AssetImage(
+                            "lib/assets/images/grid/celebrities.jpg"),
+                        fit: BoxFit.fill)),
+                child: const Text(
+                  "celebrities",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      backgroundColor: Colors.black),
+                ),
               ),
+              onTap: () {
+                Navigator.of(context).pushNamed("blog");
+              },
             ),
             Container(
               alignment: Alignment.bottomCenter,

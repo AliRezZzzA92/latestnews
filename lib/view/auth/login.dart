@@ -39,7 +39,10 @@ class Loginpage extends StatelessWidget {
               children: [
                 Text("username :", style: TextStyle(fontSize: 20)),
                 SizedBox(width: 10),
-                Mytextfield(data: "username"),
+                Mytextfield(
+                  label: "username",
+                  controller: usernamectr,
+                ),
               ],
             ),
             const SizedBox(height: 10),
@@ -48,7 +51,10 @@ class Loginpage extends StatelessWidget {
               children: [
                 Text("password :", style: TextStyle(fontSize: 20)),
                 SizedBox(width: 10),
-                Mytextfield(data: "password"),
+                Mytextfield(
+                  label: "password",
+                  controller: passwordctr,
+                ),
               ],
             ),
             const SizedBox(height: 20),

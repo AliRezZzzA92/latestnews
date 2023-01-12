@@ -1,3 +1,4 @@
+import 'package:blogproject/about%20us.dart';
 import 'package:blogproject/myblog.dart';
 import 'package:blogproject/view/auth/login.dart';
 import 'package:blogproject/view/auth/register.dart';
@@ -13,6 +14,6 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Regmob();
+    return const Aboutus();
   }
 }

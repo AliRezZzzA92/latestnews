@@ -50,14 +50,15 @@ class _RegmobState extends State<Regmob> {
                   // ),
                   Visibility(
                     visible: Responsive.isMobile(context),
-                    child: Text(
+                    replacement: const Text("replacement"),
+                    child: const Text(
                       "visible",
                       style: TextStyle(fontSize: 18),
                     ),
-                    replacement: Text("replacement"),
                   ),
                   const SizedBox(width: 10),
-                  const Mytextfield(data: "phone number"),
+                  Mytextfield(
+                      label: "phone number", controller: phonenumberctr),
                   const SizedBox(width: 35)
                 ],
               ),

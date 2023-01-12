@@ -41,7 +41,10 @@ class Registerpage extends StatelessWidget {
                 children: [
                   Text("username :", style: TextStyle(fontSize: 20)),
                   SizedBox(width: 10),
-                  Mytextfield(data: "username"),
+                  Mytextfield(
+                    label: "username",
+                    controller: usernamectr,
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
@@ -50,7 +53,10 @@ class Registerpage extends StatelessWidget {
                 children: [
                   Text("password :", style: TextStyle(fontSize: 20)),
                   SizedBox(width: 10),
-                  Mytextfield(data: "password"),
+                  Mytextfield(
+                    label: "password",
+                    controller: passwordctr,
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
@@ -59,7 +65,10 @@ class Registerpage extends StatelessWidget {
                 children: [
                   Text("phone number :", style: TextStyle(fontSize: 20)),
                   SizedBox(width: 10),
-                  Mytextfield(data: "phone number"),
+                  Mytextfield(
+                    label: "phone number",
+                    controller: phonenumberctr,
+                  ),
                   SizedBox(width: 35)
                 ],
               ),
@@ -70,7 +79,10 @@ class Registerpage extends StatelessWidget {
                   SizedBox(width: 45),
                   Text("Email :", style: TextStyle(fontSize: 20)),
                   SizedBox(width: 10),
-                  Mytextfield(data: "Email"),
+                  Mytextfield(
+                    label: "Email",
+                    controller: emailctr,
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
