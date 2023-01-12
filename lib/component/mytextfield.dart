@@ -14,7 +14,9 @@ class _MytextfieldState extends State<Mytextfield> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width - 600,
+      width: MediaQuery.of(context).size.width > 450
+          ? (MediaQuery.of(context).size.width - 250)
+          : 200,
       child: Form(
         key: _formkey,
         child: TextFormField(
