@@ -3,14 +3,14 @@ import 'dart:html';
 import 'package:blogproject/component/mytextfield.dart';
 import 'package:flutter/material.dart';
 
-class contactus extends StatefulWidget {
-  const contactus({super.key});
+class Contactus extends StatefulWidget {
+  const Contactus({super.key});
 
   @override
-  State<contactus> createState() => _contactusState();
+  State<Contactus> createState() => _contactusState();
 }
 
-class _contactusState extends State<contactus> {
+class _contactusState extends State<Contactus> {
   TextEditingController nameCtr = TextEditingController();
   TextEditingController emailCtr = TextEditingController();
   TextEditingController textCtr = TextEditingController();

@@ -1,3 +1,4 @@
+import 'package:blogproject/services/responsive.dart';
 import 'package:flutter/material.dart';
 
 class Mytextfield extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MytextfieldState extends State<Mytextfield> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width > 450
+      width: Responsive.isMobile(context)
           ? (MediaQuery.of(context).size.width - 250)
           : 200,
       child: TextFormField(

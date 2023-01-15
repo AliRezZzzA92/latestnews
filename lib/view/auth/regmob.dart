@@ -1,6 +1,8 @@
 import 'package:blogproject/services/responsive.dart';
+import 'package:blogproject/view/model/loginmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:blogproject/component/mytextfield.dart';
+import 'package:http/http.dart';
 
 class Regmob extends StatefulWidget {
   const Regmob({super.key});
@@ -82,7 +84,16 @@ class _RegmobState extends State<Regmob> {
                 width: 400,
                 child: RawMaterialButton(
                   onPressed: () {
-                    print(" phone number: ${phonenumberctr.text}");
+                    regmob(phonenumberctr.text).then(
+                      (response) {
+                        if (response.statusCode == 200) {
+                          print("succes");
+                        } else {
+                          return "error";
+                        }
+                        print(response.statusCode);
+                      },
+                    );
                   },
                   fillColor: Colors.greenAccent,
                   shape: RoundedRectangleBorder(
