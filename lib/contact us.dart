@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:blogproject/component/mytextfield.dart';
 import 'package:flutter/material.dart';
 
@@ -41,10 +43,10 @@ class _contactusState extends State<contactus> {
       body: Form(
         child: SizedBox(
           child: Column(
-            
             children: [
-              TextField(controller: nameCtr),
-              Mytextfield(label: "name",controller: nameCtr,)],
+              Mytextfield(label: "name", controller: nameCtr),
+              Mytextfield(label: "email", controller: emailCtr),
+            ],
           ),
         ),
       ),
