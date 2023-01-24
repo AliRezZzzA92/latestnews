@@ -1,8 +1,10 @@
+import 'package:blogproject/controller/loginCtr.dart' as controller;
+import 'package:blogproject/provider/login-state.dart';
 import 'package:blogproject/services/responsive.dart';
-import 'package:blogproject/view/model/loginmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:blogproject/component/mytextfield.dart';
-import 'package:http/http.dart';
+import 'package:blogproject/globals/globals.dart' as globals;
+import 'package:provider/provider.dart';
 
 class Regmob extends StatefulWidget {
   const Regmob({super.key});
@@ -81,36 +83,43 @@ class _RegmobState extends State<Regmob> {
               ),
               const SizedBox(height: 15),
               SizedBox(
-                width: 400,
-                child: RawMaterialButton(
-                  onPressed: () {
-                    regmob(phonenumberctr.text).then(
-                      (response) {
-                        if (response.statusCode == 200) {
-                          print("succes");
-                        } else {
-                          return "error";
-                        }
-                        print(response.statusCode);
+                  width: 350,
+                  child:
+                      Consumer<Loginstate>(builder: ((context, value, child) {
+                    return RawMaterialButton(
+                      onPressed: () {
+                        controller.loginController(
+                            phonenumberctr.text, context);
+                        // regmob(phonenumberctr.text).then(
+                        //   (response) {
+                        //     if (response.statusCode == 200) {
+                        //       print("succes");
+                        //     } else {
+                        //       return "error";
+                        //     }
+                        //     print(response.statusCode);
+                        //   },
+                        // );
                       },
-                    );
-                  },
-                  fillColor: Colors.greenAccent,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
-                  elevation: 5,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        "proceed to your account",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      fillColor: globals.btn,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      elevation: 5,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text(
+                            "proceed to your account",
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          Icon(
+                            Icons.verified,
+                            color: Colors.white,
+                          )
+                        ],
                       ),
-                      Icon(Icons.verified)
-                    ],
-                  ),
-                ),
-              ),
+                    );
+                  }))),
               const SizedBox(height: 10),
             ],
           ),
