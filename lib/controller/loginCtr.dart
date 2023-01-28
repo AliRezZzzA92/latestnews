@@ -20,6 +20,37 @@ loginController(String phonenumber, BuildContext context) {
       if (response == 200) {
         print("succes");
         context.read<Loginstate>().changecolor(Colors.blue);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: const Text("fine"),
+            action: SnackBarAction(label: 'click', onPressed: () {})));
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context).showMaterialBanner(MaterialBanner(
+          content: Text("data"),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).clearMaterialBanners();
+                },
+                child: Text("data")),
+          ],
+        ));
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                title: const Text("salam"),
+                actions: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(Icons.done_all)),
+                ],
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                content: const Text("discription"),
+              );
+            });
       } else {
         context.read<Loginstate>().changecolor(Colors.red);
 

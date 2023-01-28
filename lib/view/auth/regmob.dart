@@ -39,8 +39,8 @@ class _RegmobState extends State<Regmob> {
                   width: 200,
                   height: 200),
               const SizedBox(height: 30),
-              const Text(
-                "please enter you're phone number and wait for varification code to finalize your enterance",
+              Text(
+                "please enter you're phone number ${globals.me} and wait for varification code to finalize your enterance",
                 style: TextStyle(fontSize: 20),
               ),
               const SizedBox(height: 15),
