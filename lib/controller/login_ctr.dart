@@ -1,8 +1,5 @@
-// ignore_for_file: avoid_print, unnecessary_import
-
 import 'package:blogproject/model/loginmodel.dart' as model;
-import 'package:blogproject/provider/login-state.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:blogproject/provider/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,13 +22,13 @@ loginController(String phonenumber, BuildContext context) {
             action: SnackBarAction(label: 'click', onPressed: () {})));
         ScaffoldMessenger.of(context).clearSnackBars();
         ScaffoldMessenger.of(context).showMaterialBanner(MaterialBanner(
-          content: Text("data"),
+          content: const Text("data"),
           actions: [
             TextButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).clearMaterialBanners();
                 },
-                child: Text("data")),
+                child: const Text("data")),
           ],
         ));
         showDialog(

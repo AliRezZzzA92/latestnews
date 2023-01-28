@@ -1,5 +1,5 @@
-import 'package:blogproject/controller/loginCtr.dart' as controller;
-import 'package:blogproject/provider/login-state.dart';
+import 'package:blogproject/controller/login_ctr.dart' as controller;
+import 'package:blogproject/provider/login_state.dart';
 import 'package:blogproject/services/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:blogproject/component/mytextfield.dart';
@@ -24,7 +24,7 @@ class _RegmobState extends State<Regmob> {
           backgroundColor: Colors.redAccent,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [const Text("sign in")],
+            children: const [Text("sign in")],
           )),
       body: SingleChildScrollView(
         child: Padding(
@@ -41,7 +41,7 @@ class _RegmobState extends State<Regmob> {
               const SizedBox(height: 30),
               Text(
                 "please enter you're phone number ${globals.me} and wait for varification code to finalize your enterance",
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
               const SizedBox(height: 15),
               Row(

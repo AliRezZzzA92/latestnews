@@ -1,13 +1,4 @@
-import 'package:blogproject/about%20us.dart';
-import 'package:blogproject/contact%20us.dart';
-import 'package:blogproject/myblog.dart';
-import 'package:blogproject/view/auth/login.dart';
 import 'package:blogproject/view/auth/register.dart';
-import 'package:blogproject/view/auth/regmob.dart';
-import 'package:blogproject/view/auth/welcomepage.dart';
-import 'package:blogproject/view/gridview.dart';
-import 'package:blogproject/view/index/index.dart';
-import 'package:blogproject/view/profile.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
@@ -15,6 +6,6 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Regmob();
+    return const Registerpage();
   }
 }
