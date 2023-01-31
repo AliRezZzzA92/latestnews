@@ -10,10 +10,9 @@ class Welcomepage extends StatefulWidget {
 class _WelcomepageState extends State<Welcomepage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Future.delayed(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () {
         Navigator.of(context).pushNamed("index");
       },
